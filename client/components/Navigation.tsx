@@ -115,10 +115,14 @@ const Navigation = () => {
               >
                 Kayıt Ol
               </Link>
-              <button className="flex items-center space-x-2 px-3 py-2 text-white hover:text-tech-cyan transition-colors">
+              <Link
+                to="/sepet"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center space-x-2 px-3 py-2 text-white hover:text-tech-cyan transition-colors"
+              >
                 <ShoppingCart size={18} />
-                <span>Sepet (0)</span>
-              </button>
+                <span>Sepet ({totalItems})</span>
+              </Link>
             </div>
           </div>
         )}
