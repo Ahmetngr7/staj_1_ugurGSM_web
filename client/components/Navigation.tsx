@@ -58,12 +58,17 @@ const Navigation = () => {
             <Link to="/kayit" className="tech-button text-sm py-2 px-4">
               Kayıt Ol
             </Link>
-            <button className="relative p-2 text-white hover:text-tech-cyan transition-colors">
+            <Link
+              to="/sepet"
+              className="relative p-2 text-white hover:text-tech-cyan transition-colors"
+            >
               <ShoppingCart size={20} />
-              <span className="absolute -top-1 -right-1 bg-tech-blue text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-                0
-              </span>
-            </button>
+              {totalItems > 0 && (
+                <span className="absolute -top-1 -right-1 bg-tech-blue text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
+                  {totalItems > 99 ? "99+" : totalItems}
+                </span>
+              )}
+            </Link>
           </div>
 
           {/* Mobile menu button */}
