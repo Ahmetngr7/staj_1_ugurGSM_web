@@ -272,8 +272,19 @@ const Index = () => {
                         </span>
                       )}
                     </div>
-                    <button className="bg-tech-blue hover:bg-tech-cyan text-white p-2 rounded-lg transition-colors">
-                      <ShoppingCart size={18} />
+                    <button
+                      onClick={() => addToCart(product)}
+                      className={`p-2 rounded-lg transition-all duration-300 ${
+                        isInCart(product.id)
+                          ? "bg-tech-success text-white"
+                          : "bg-tech-blue hover:bg-tech-cyan text-white hover:scale-110"
+                      }`}
+                    >
+                      {isInCart(product.id) ? (
+                        <Check size={18} />
+                      ) : (
+                        <ShoppingCart size={18} />
+                      )}
                     </button>
                   </div>
                 </div>
