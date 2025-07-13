@@ -12,7 +12,9 @@ import {
   Truck,
   ChevronLeft,
   ChevronRight,
+  Check,
 } from "lucide-react";
+import { useCart } from "../contexts/CartContext";
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
