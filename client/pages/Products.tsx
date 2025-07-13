@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Search, Filter, Star, ShoppingCart } from "lucide-react";
+import { Search, Filter, Star, ShoppingCart, Check } from "lucide-react";
+import { useCart } from "../contexts/CartContext";
 
 const Products = () => {
   const [searchTerm, setSearchTerm] = useState("");
