@@ -6,6 +6,7 @@ import { useCart } from "../contexts/CartContext";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { totalItems } = useCart();
 
   const menuItems = [
     { name: "Anasayfa", path: "/" },
