@@ -18,6 +18,7 @@ import { useCart } from "../contexts/CartContext";
 
 const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { addToCart, isInCart } = useCart();
 
   const featuredProducts = [
     {
