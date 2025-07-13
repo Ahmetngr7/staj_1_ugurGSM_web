@@ -6,6 +6,7 @@ const Products = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortBy, setSortBy] = useState("popular");
+  const { addToCart, isInCart } = useCart();
 
   const categories = [
     { id: "all", name: "Tüm Ürünler" },
